@@ -13,7 +13,8 @@
         android:background="#B10F02"
         app:title="Home"
         app:titleTextColor="#ffffff"
-        android:id="@+id/toolbar">
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
     </androidx.appcompat.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
