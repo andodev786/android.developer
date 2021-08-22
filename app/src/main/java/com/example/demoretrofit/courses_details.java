@@ -13,24 +13,31 @@ import com.bumptech.glide.Glide;
 
 import org.w3c.dom.Text;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class courses_details extends AppCompatActivity {
+
 String imageUrl;
 String courseMode;
 String courseTrack;
+@BindView(R.id.imageset)
 ImageView imageView;
+@BindView(R.id.courseName)
 TextView courseName;
+@BindView(R.id.courseDuration)
 TextView courseDuration;
+@BindView(R.id.courseMode)
 TextView coursemode;
-    //Toolbar toolbar;
+@BindView(R.id.back_arrow)
+ImageView back_press;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courses_details);
-        imageView=(ImageView)findViewById(R.id.imageset);
-        courseName=(TextView)findViewById(R.id.courseName);
-        courseDuration=(TextView)findViewById(R.id.courseDuration);
-         //toolbar = (Toolbar) findViewById(R.id.toolbar);
-        coursemode=(TextView)findViewById(R.id.courseMode);
+        ButterKnife.bind(courses_details.this);
         imageUrl=getIntent().getStringExtra("imageUrl");
         courseTrack=getIntent().getStringExtra("courseDuration");
         courseMode=getIntent().getStringExtra("courseMode");
@@ -38,6 +45,14 @@ TextView coursemode;
         courseName.setText(getIntent().getStringExtra("coursename"));
         courseDuration.setText(getIntent().getStringExtra("courseDuration"));
         coursemode.setText(getIntent().getStringExtra("courseMode"));
+        back_press.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(courses_details.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
+
 
 
     }

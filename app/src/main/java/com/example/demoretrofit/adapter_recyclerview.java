@@ -15,6 +15,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class adapter_recyclerview extends RecyclerView.Adapter<adapter_recyclerview.myviewHolder> {
     List<model> data;
     Context context;
@@ -70,14 +73,17 @@ public class adapter_recyclerview extends RecyclerView.Adapter<adapter_recyclerv
     class myviewHolder extends RecyclerView.ViewHolder
 
 {
+@BindView(R.id.texte)
 TextView text;
+@BindView(R.id.imag)
 ImageView img;
 
 
     public myviewHolder(@NonNull View itemView) {
         super(itemView);
-        text=itemView.findViewById(R.id.texte);
-        img=itemView.findViewById(R.id.imag);
+
+        ButterKnife.bind(this,itemView);
+
     }
 }
 }
