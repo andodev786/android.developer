@@ -58,7 +58,7 @@ showdata();
                         }
 
                     List<model> data=response.body();
-                    adapter_recyclerview myadaptr=new adapter_recyclerview(data);
+                    adapter_recyclerview myadaptr=new adapter_recyclerview(getApplicationContext(),data);
                     recyclerView.setAdapter(myadaptr);
 
 

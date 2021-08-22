@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DemoRetrofit</string>
+    <string name="title_activity_courses_details">courses_details</string>
 </resources>

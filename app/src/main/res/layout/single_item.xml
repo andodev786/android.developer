@@ -16,31 +16,25 @@
         android:id="@+id/imag"
         android:scaleType="centerCrop"
         android:src="@drawable/programming"/>
-<View
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="0.1"/>
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1.5"
     android:orientation="horizontal"
     android:weightSum="10"
-    android:background="#E91E63">
-    <View
+    android:background="#E91E63"
+    android:gravity="center">
+
+    <TextView
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:textSize="17dp"
-            android:text=""
-            android:textColor="#ffffff"
-            android:textAlignment="center"
-            android:id="@+id/texte"
-            android:textStyle="bold"/>
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:text="Course Name"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:id="@+id/texte"
+        android:textColor="#ffffff"/>
 
 
 </LinearLayout>
